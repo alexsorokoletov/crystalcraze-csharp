@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A3A2A18F-C96A-4512-B98D-04FF1C806A25}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Craze1.Android</RootNamespace>
+    <AssemblyName>Craze1.Android</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidSupportedAbis>armeabi-v7a%3bx86</AndroidSupportedAbis>
+    <AndroidStoreUncompressedFileExtensions />
+    <MandroidI18n />
+    <TargetFrameworkVersion>v2.3</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;ANDROID</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;ANDROID</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="box2d">
+      <HintPath>..\..\..\CocosAssemblies\Android\box2d.dll</HintPath>
+    </Reference>
+    <Reference Include="cocos2d-xna">
+      <HintPath>..\..\..\CocosAssemblies\Android\cocos2d-xna.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\..\CocosAssemblies\Android\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Lidgren.Network, Version=2011.3.12.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CocosAssemblies\Android\Lidgren.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="OpenTK" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\Android\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="zlib.net">
+      <HintPath>..\..\..\CocosAssemblies\Android\zlib.net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Craze1\Craze1\Logic\AppDelegate.cs">
+      <Link>Logic\AppDelegate.cs</Link>
+    </Compile>
+    <Compile Include="..\Craze1\Craze1\Logic\BaseSceneLayer.cs">
+      <Link>Logic\BaseSceneLayer.cs</Link>
+    </Compile>
+    <Compile Include="..\Craze1\Craze1\Logic\ChooseLevelScene.cs">
+      <Link>Logic\ChooseLevelScene.cs</Link>
+    </Compile>
+    <Compile Include="..\Craze1\Craze1\Logic\FallingGem.cs">
+      <Link>Logic\FallingGem.cs</Link>
+    </Compile>
+    <Compile Include="..\Craze1\Craze1\Logic\GameOverGem.cs">
+      <Link>Logic\GameOverGem.cs</Link>
+    </Compile>
+    <Compile Include="..\Craze1\Craze1\Logic\GameSceneLayer.cs">
+      <Link>Logic\GameSceneLayer.cs</Link>
+    </Compile>
+    <Compile Include="..\Craze1\Craze1\Logic\MainSceneLayer.cs">
+      <Link>Logic\MainSceneLayer.cs</Link>
+    </Compile>
+    <Compile Include="Activity1.cs" />
+    <Compile Include="Game1.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\**\*.*" />
+    <AndroidAsset Include="Assets\Content\Fonts\Arial2.fnt.xnb" />
+    <AndroidAsset Include="Assets\Content\Fonts\Arial2_0.xnb" />
+    <AndroidAsset Include="Assets\Content\Fonts\Foo64.fnt.xnb" />
+    <AndroidAsset Include="Assets\Content\Fonts\Foo64_0.xnb" />
+    <AndroidAsset Include="Assets\Content\Fonts\scorefont.fnt.xnb" />
+    <AndroidAsset Include="Assets\Content\Fonts\scorefont.xnb" />
+    <AndroidAsset Include="Assets\Content\GameScene\background.xnb" />
+    <AndroidAsset Include="Assets\Content\GameScene\btn-pause-down.xnb" />
+    <AndroidAsset Include="Assets\Content\GameScene\btn-pause.xnb" />
+    <AndroidAsset Include="Assets\Content\GameScene\game_bg_android.xnb" />
+    <AndroidAsset Include="Assets\Content\GameScene\game_bg_win8.xnb" />
+    <AndroidAsset Include="Assets\Content\GameScene\header.xnb" />
+    <AndroidAsset Include="Assets\Content\GameScene\header_win8.xnb" />
+    <AndroidAsset Include="Assets\Content\GameScene\shimmer.plist.xnb" />
+    <AndroidAsset Include="Assets\Content\GameScene\shimmer.xnb" />
+    <AndroidAsset Include="Assets\Content\GameScene\timebar.xnb" />
+    <AndroidAsset Include="Assets\Content\GameScene\timebar_bg.xnb" />
+    <AndroidAsset Include="Assets\Content\LevelsScene\btn-12x12-down.xnb" />
+    <AndroidAsset Include="Assets\Content\LevelsScene\btn-12x12.xnb" />
+    <AndroidAsset Include="Assets\Content\LevelsScene\btn-13x15-down.xnb" />
+    <AndroidAsset Include="Assets\Content\LevelsScene\btn-13x15.xnb" />
+    <AndroidAsset Include="Assets\Content\LevelsScene\btn-8x10-down.xnb" />
+    <AndroidAsset Include="Assets\Content\LevelsScene\btn-8x10.xnb" />
+    <AndroidAsset Include="Assets\Content\LevelsScene\game-mode.xnb" />
+    <AndroidAsset Include="Assets\Content\MainScene\btn-about-down.xnb" />
+    <AndroidAsset Include="Assets\Content\MainScene\btn-about.xnb" />
+    <AndroidAsset Include="Assets\Content\MainScene\btn-levels-down.xnb" />
+    <AndroidAsset Include="Assets\Content\MainScene\btn-levels.xnb" />
+    <AndroidAsset Include="Assets\Content\MainScene\btn-play-down.xnb" />
+    <AndroidAsset Include="Assets\Content\MainScene\btn-play.xnb" />
+    <AndroidAsset Include="Assets\Content\MainScene\logo.xnb" />
+    <AndroidAsset Include="Assets\Content\Particles\bg-stars.plist.xnb" />
+    <AndroidAsset Include="Assets\Content\Particles\power-play.plist.xnb" />
+    <AndroidAsset Include="Assets\Content\Particles\taken-gem.plist.xnb" />
+    <AndroidAsset Include="Assets\Content\Particles\taken-gem.xnb" />
+    <AndroidAsset Include="Assets\Content\Particles\taken-hrow.plist.xnb" />
+    <AndroidAsset Include="Assets\Content\Particles\taken-vrow.plist.xnb" />
+    <AndroidAsset Include="Assets\Content\Sounds\click.xnb" />
+    <AndroidAsset Include="Assets\Content\Sounds\endgame.xnb" />
+    <AndroidAsset Include="Assets\Content\Sounds\gem-0.xnb" />
+    <AndroidAsset Include="Assets\Content\Sounds\gem-1.xnb" />
+    <AndroidAsset Include="Assets\Content\Sounds\gem-2.xnb" />
+    <AndroidAsset Include="Assets\Content\Sounds\gem-3.xnb" />
+    <AndroidAsset Include="Assets\Content\Sounds\gem-4.xnb" />
+    <AndroidAsset Include="Assets\Content\Sounds\loop.xnb" />
+    <AndroidAsset Include="Assets\Content\Sounds\miss.xnb" />
+    <AndroidAsset Include="Assets\Content\Sounds\powerup.xnb" />
+    <AndroidAsset Include="Assets\Content\Sounds\tap-0.xnb" />
+    <AndroidAsset Include="Assets\Content\Sounds\tap-1.xnb" />
+    <AndroidAsset Include="Assets\Content\Sounds\tap-2.xnb" />
+    <AndroidAsset Include="Assets\Content\Sounds\tap-3.xnb" />
+    <AndroidAsset Include="Assets\Content\Sounds\timer.xnb" />
+    <AndroidAsset Include="Assets\Content\crystals.xnb" />
+    <AndroidAsset Include="Assets\Content\crystals.plist.xnb" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Layout\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\Splash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Styles.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\Sounds\loop.wma" />
+    <Content Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+     Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
